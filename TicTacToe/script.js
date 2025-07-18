@@ -1,4 +1,4 @@
- console.log("Welcome to Tic Tac Toe");
+console.log("Welcome to Tic Tac Toe");
 let audioTurn = new Audio("ting.mp3");
 let gameover = new Audio("gameover.mp3");
 let turn = "X";
@@ -41,9 +41,17 @@ Array.from(boxes).forEach(element =>{
         turn = changeTurn();
        new Audio("ting.mp3").play();
         checkWin();
-        if(!isGameover){
-            document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
-        }
+        if (!isGameover) {
+            let boxtextArray = Array.from(document.getElementsByClassName('boxtext'));
+             let isDraw = boxtextArray.every(box => box.innerText !== '');
+                if (isDraw) {
+                    document.getElementsByClassName("info")[0].innerText = "It's a Draw!";
+                    isGameover = true;
+                    gameover.play();
+                } else {
+                    document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
+                }
+            }
     }
   })
 })
@@ -55,8 +63,9 @@ reset.addEventListener('click',()=>{
     });
     turn = "X";
     isGameover = false;
-document.querySelector(".line").style.width = "0";
+    document.querySelector(".line").style.width = "0";
     document.getElementsByClassName("info")[0].innerText = "Turn for " + turn;
-     document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px";
+    document.querySelector('.imgbox').getElementsByTagName('img')[0].style.width = "0px";
 })
+
 
