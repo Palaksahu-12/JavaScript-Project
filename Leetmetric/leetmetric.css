@@ -1,0 +1,107 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body{
+    background-color:rgb(72, 74, 78);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    gap:19px ;
+    background-color: rgb(101, 101, 99);
+    padding: 50px;
+    border-radius:18px ;
+    width:580px;
+    max-width:600px;
+}
+
+h1{
+    font-size: 40px;
+}
+
+.user-container{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.user-input{
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-container ,p {
+    font-size: 20px;
+}
+
+#user{
+  font-size: 17px;
+  width:194px;
+  padding: 5px;
+}
+
+#search-bt{
+   font-size: 16.6px;
+   background-color: rgb(191, 191, 197);
+   padding:5px;
+}
+
+.circle{
+    width:150px;
+    height:150px;
+    border-radius:50% ;
+    border:4px solid rgb(44, 44, 45);
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    align-items:center ;
+    justify-content:center ;
+    font-size: 1rem;
+    color:white ;
+    font-weight:700;
+    background:conic-gradient(rgb(44, 44, 45) var(--progress-degree, 0%),#54494f 0%) ;
+}
+
+.circle span{
+    position: relative;
+    z-index: 2;
+}
+
+.progress{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.card{
+    background-color:rgb(65, 65, 81);
+    color: white;
+    width:289px;
+    height: 58px;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* padding-left: 15px; */
+    padding: 8px;
+    border:2px solid black;
+    border-radius:10px;
+    /* display: flex; */
+    /* flex-direction: column; */
+}
+
+h3{
+          font-size: 15.8px;
+}
+
