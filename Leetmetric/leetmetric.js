@@ -26,14 +26,11 @@ document.addEventListener("DOMContentLoaded",function(){
 
 
       async function fetchUserDetail(username){
-          
-          
-          // const url = `https://leetcode-stats-api.herokuapp.com/${username}`
+                  
           try{
               searchButton.textContent = "Searching...";
               searchButton.disabled = true;
 
-              // const response = await fetch(url);
               // url for  temporary access to the demo server.
               // https://cors-anywhere.herokuapp.com/corsdemo
               const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
